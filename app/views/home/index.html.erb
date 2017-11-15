@@ -1,0 +1,11 @@
+<div class="video-background">
+  <div id="videoWithJs" class="video-foreground">
+    <iframe src="https://www.youtube.com/embed/rMLUpKk8SXs?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=rMLUpKk8SXs" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<% if @bridge.status[:traffic] == :allowed %>
+  <h1>NO</h1>
+  <h2>Next opening: <%= @bridge.next_lift %></h2>
+<% else %>
+  <h1>YES</h1>
+<% end %>
